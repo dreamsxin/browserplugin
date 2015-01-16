@@ -1,0 +1,98 @@
+/**********************************************************\
+
+  Auto-generated FireBreathWin.idl
+
+\**********************************************************/
+
+// FireBreathWin.idl : IDL source for FireBreathWin
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (FireBreathWin.tlb) and marshalling code.
+
+#include "global/COM_config.h"
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+import "dispex.idl";
+
+[
+    uuid(FBTYPELIB_GUID),
+    version(1.0),
+    helpstring(FBTYPELIB_DESC)
+]
+library FBTestPluginLib
+{
+    [
+        object,
+        uuid(IFBControl_GUID),
+        dual,
+        nonextensible,
+        helpstring(IFBControl_DESC),
+        pointer_default(unique)
+    ]
+    interface IFBControl : IDispatchEx {
+    };
+    [
+        object,
+        uuid(IFBComJavascriptObject_GUID),
+        dual,
+        nonextensible,
+        helpstring(IFBComJavascriptObject_DESC),
+        pointer_default(unique)
+    ]
+    interface IFBComJavascriptObject : IDispatchEx {
+    };
+
+    importlib("stdole2.tlb");
+    [
+        uuid(IFBComEventSource_GUID),
+        helpstring(IFBComEventSource_DESC)
+    ]
+    dispinterface IFBComEventSource
+    {
+        properties:
+        methods:
+    };
+
+    [
+        uuid(9E506282-69D3-5ABA-9C1D-15994B37F4AC),
+        control,
+        helpstring(FBControl_DESC)
+    ]
+    coclass FBControl0
+    {
+        [default] interface IFBControl;
+        [default, source] dispinterface IFBComEventSource;
+    };
+    [
+        uuid(9E506282-69D3-5ABA-9C1D-15994B37F4AD),
+        control,
+        helpstring(FBControl_DESC)
+    ]
+    coclass FBControl1
+    {
+        [default] interface IFBControl;
+        [default, source] dispinterface IFBComEventSource;
+    };
+    [
+        uuid(9E506282-69D3-5ABA-9C1D-15994B37F4AE),
+        control,
+        helpstring(FBControl_DESC)
+    ]
+    coclass FBControl2
+    {
+        [default] interface IFBControl;
+        [default, source] dispinterface IFBComEventSource;
+    };
+    [
+        uuid(FBComJavascriptObject_GUID),
+        control,
+        helpstring(FBComJavascriptObject_DESC)
+    ]
+    coclass FBComJavascriptObject
+    {
+        [default] interface IFBComJavascriptObject;
+        [default, source] dispinterface IFBComEventSource;
+    }
+};

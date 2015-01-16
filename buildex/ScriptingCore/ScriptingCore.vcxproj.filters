@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ScriptingCore\variant.cpp">
+      <Filter>Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\utf8_tools.cpp">
+      <Filter>Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\URI.cpp">
+      <Filter>Types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Document.cpp">
+      <Filter>DOM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Element.cpp">
+      <Filter>DOM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Node.cpp">
+      <Filter>DOM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Window.cpp">
+      <Filter>DOM</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\Util\JSFakeArray.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIAuto.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIImpl.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIProxy.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPISimple.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\BrowserHost.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\CrossThreadCall.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSFunction.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\JSEvent.cpp">
+      <Filter>JSAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ScriptingCore\precompiled_headers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ScriptingCore\APITypes.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\variant.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\variant_conversions.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\variant_list.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\variant_map.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\TypeIDMap.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\utf8_tools.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\URI.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\SafeQueue.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSExceptions.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\FBPointers.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\ShareableReference.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\logging.h">
+      <Filter>Types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\DOM.h">
+      <Filter>DOM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Document.h">
+      <Filter>DOM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Element.h">
+      <Filter>DOM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Node.h">
+      <Filter>DOM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Window.h">
+      <Filter>DOM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\Util\JSFakeArray.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\Util\meta_util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\Util\meta_util_impl.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\Util\typesafe_event.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPI.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIAuto.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIImpl.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIProxy.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPISimple.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\BrowserHost.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSObject.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\CrossThreadCall.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\AsyncFunctionCall.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\MethodConverter.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\PropertyConverter.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSCallback.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSFunction.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\JSEvent.h">
+      <Filter>JSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\ConverterUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\TestJSAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ScriptingCore\precompiled_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\ScriptingCore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\ScriptingCore\dispatch_gen.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F29E3CC6-87FC-4BE2-A698-C04529D8E0E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5B05D48D-307B-4770-AD8C-B4EF3B23CFA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DOM">
+      <UniqueIdentifier>{D3FB001D-C218-42C6-AAE4-12C9943B63A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{141445E2-45B6-4F60-8159-C6AA931ED2D5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSAPI">
+      <UniqueIdentifier>{5A57E3AA-53A7-4F25-A24F-6D6645A6F029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Types">
+      <UniqueIdentifier>{FD28FC14-1301-4A44-8912-D6B3914DEE9E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

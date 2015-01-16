@@ -82,7 +82,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\RakNet;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -113,7 +113,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Debug\ActiveXCore.lib;..\..\PluginCore\Debug\PluginCore.lib;PluginAuto\Debug\EOTU_PluginAuto.lib;..\..\NpapiCore\Debug\NpapiCore.lib;..\..\ScriptingCore\Debug\ScriptingCore.lib;..\..\PluginCore\Debug\PluginCore.lib;..\..\boost\libs\thread\Debug\boost_thread.lib;..\..\boost\libs\system\Debug\boost_system.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Debug\ActiveXCore.lib;..\..\PluginCore\Debug\PluginCore.lib;PluginAuto\Debug\EOTU_PluginAuto.lib;..\..\NpapiCore\Debug\NpapiCore.lib;..\..\ScriptingCore\Debug\ScriptingCore.lib;..\..\boost\libs\thread\Debug\boost_thread.lib;..\..\boost\libs\system\Debug\boost_system.lib;Wininet.lib;..\..\Debug\RakNet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -360,6 +360,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <None Include="..\..\..\projects\EotuSocket\Win\projectDef.cmake" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\src\3rdParty\RakNet\RakNet.vcxproj">
+      <Project>{bc75cd23-cb75-4233-a305-b7328825a9a5}</Project>
+    </ProjectReference>
     <ProjectReference Include="K:/workspace/firebreath-1/build/ActiveXCore/ActiveXCore.vcxproj">
       <Project>22B42E57-268D-42D6-88A6-FA066323A7E9</Project>
     </ProjectReference>

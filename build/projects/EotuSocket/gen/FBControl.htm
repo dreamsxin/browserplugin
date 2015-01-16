@@ -25,6 +25,12 @@
             addEvent(plugin(), 'test', function(){
                 alert("Received a test event from the plugin.")
             });
+            addEvent(plugin(), 'Connected', function(){
+                alert("connected")
+            });
+            addEvent(plugin(), 'StatusChange', function(code, status){
+                alert("StatusChange:" + status)
+            });
         }
         function pluginLoaded() {
             alert("Plugin loaded!");
@@ -40,6 +46,13 @@
         function testEvent()
         {
             plugin().testEvent();
+        }
+        
+        function testConnect()
+        {
+            plugin().connect('localhost', 80, function(msg) {
+				alert("rec:" + msg);
+			});
         }
         
         function pluginValid()
@@ -59,5 +72,6 @@
 <a href="#" onclick="javascript:pluginValid()">Click me!</a> <br />
 <a href="#" onclick="javascript:addTestEvent()">Activate click counter</a> <br />
 <a href="#" onclick="javascript:testEvent()">Fire a test event</a> <br />
+<a href="#" onclick="javascript:testConnect()">Connect</a> <br />
 </body>
 </html>

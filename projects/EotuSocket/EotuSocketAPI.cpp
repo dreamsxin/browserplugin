@@ -80,28 +80,62 @@ bool EotuSocketAPI::connect(const std::string& host, const int port, const FB::J
 
 void EotuSocketAPI::receive(const FB::JSObjectPtr &callback)
 {
+	RakNet::Packet* packet;
 	while (!boost::this_thread::interruption_requested())
 	{
-		RakNet::Packet *packet = client->Receive();
-		if (packet) {
+		for (packet=client->Receive(); packet; client->DeallocatePacket(packet), packet=client->Receive()) {
 			unsigned char typeID;
 			RakNet::BitStream stream(packet->data, packet->length, false);
 			stream.Read(typeID);
 			switch (typeID) {
+			case ID_ALREADY_CONNECTED:
+				{
+					fire_StatusChange(ID_ALREADY_CONNECTED, "ID_ALREADY_CONNECTED");
+				}
+				break;
+
+			case ID_REMOTE_CONNECTION_LOST:
+				{
+					fire_StatusChange(ID_REMOTE_CONNECTION_LOST, "ID_REMOTE_CONNECTION_LOST");
+				}
+				break;
+
+			case ID_REMOTE_NEW_INCOMING_CONNECTION:
+				{
+					fire_StatusChange(ID_REMOTE_NEW_INCOMING_CONNECTION, "ID_REMOTE_NEW_INCOMING_CONNECTION");
+				}
+				break;
+			case ID_CONNECTION_LOST:
+				{
+					fire_StatusChange(ID_CONNECTION_LOST, "ID_CONNECTION_LOST");
+				}
+				break;
+			case ID_CONNECTION_ATTEMPT_FAILED:
+				{
+					fire_StatusChange(ID_CONNECTION_ATTEMPT_FAILED, "ID_CONNECTION_ATTEMPT_FAILED");
+				}
+				break;
 			case ID_CONNECTION_REQUEST_ACCEPTED:
 				{
-					connected = true;
-					break;
+					fire_StatusChange(ID_CONNECTION_REQUEST_ACCEPTED, "ID_CONNECTION_REQUEST_ACCEPTED");
+					fire_Connected();
 				}
+				break;
 			case ID_USER_PACKET_ENUM:
 				{
-					Parser(&stream, message);
-					break;
+					fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
+					try {
+						callback->Invoke("", FB::variant_list_of(packet->data));
+					} catch (const FB::script_error& ex) {
+						m_host->htmlLog(std::string("Function call failed with ") + ex.what());
+					}
 				}
+				break;
 			default:
 				break;
 			}
-			client->DeallocatePacket(packet);
 		}
+
+		boost::this_thread::sleep(boost::posix_time::seconds(1));
 	}
 }

@@ -8,7 +8,15 @@
 #include <sstream>
 #include <boost/weak_ptr.hpp>
 #include <boost/thread/thread.hpp>
-#include <boost/thread/thread.hpp>
+#include "Source/MessageIdentifiers.h"
+#include "Source/RakPeerInterface.h"
+#include "Source/RakNetTypes.h"
+#include "Source/BitStream.h"
+#include "Source/TCPInterface.h"
+#include "Source/RakSleep.h"
+#include "Source/RakString.h"
+#include "Source/Gets.h"
+#include "Source/Getche.h"
 #include "JSAPIAuto.h"
 #include "BrowserHost.h"
 #include "EotuSocket.h"
@@ -51,6 +59,7 @@ public:
 		registerMethod("connect",      make_method(this, &EotuSocketAPI::connect));
 		registerMethod("receive",      make_method(this, &EotuSocketAPI::receive));
 
+
 		RakNet::SocketDescriptor socketDescriptor(0, 0);
 		client = RakNet::RakPeerInterface::GetInstance();
 		client->Startup(1, &socketDescriptor, 1);
@@ -90,6 +99,10 @@ public:
 	bool connect(const std::string& host, const int port, const FB::JSObjectPtr &callback);
 	// Method receive
 	void receive(const FB::JSObjectPtr &callback);
+
+	// Event
+	FB_JSAPI_EVENT(Connected, 0, ());
+	FB_JSAPI_EVENT(StatusChange, 2, (const int, const FB::variant&));
 
 private:
     EotuSocketWeakPtr m_plugin;

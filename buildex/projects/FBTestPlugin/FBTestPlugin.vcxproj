@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{1546901D-252D-47F8-8BB5-926AE7BB7BB3}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>FBTestPlugin</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\bin\FBTestPlugin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FBTestPlugin.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">npFBTestPlugin</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\bin\FBTestPlugin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FBTestPlugin.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">npFBTestPlugin</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\bin\FBTestPlugin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">FBTestPlugin.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">npFBTestPlugin</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\bin\FBTestPlugin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">FBTestPlugin.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">npFBTestPlugin</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR="Debug";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"Debug\";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Debug\ActiveXCore.lib;..\..\PluginCore\Debug\PluginCore.lib;PluginAuto\Debug\FBTP_PluginAuto.lib;..\..\NpapiCore\Debug\NpapiCore.lib;..\..\ScriptingCore\Debug\ScriptingCore.lib;..\..\PluginCore\Debug\PluginCore.lib;..\..\boost\libs\thread\Debug\boost_thread.lib;..\..\boost\libs\system\Debug\boost_system.lib;..\..\fblibs\log4cplus\src\Debug\log4cplusD.lib;psapi.lib;Wininet.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/Debug/npFBTestPlugin.lib</ImportLibrary>
+      <ModuleDefinitionFile>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/gen/FireBreathWin.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>K:/workspace/firebreath-1/buildex/bin/FBTestPlugin/Debug/npFBTestPlugin.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR="Release";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"Release\";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Release\ActiveXCore.lib;..\..\PluginCore\Release\PluginCore.lib;PluginAuto\Release\FBTP_PluginAuto.lib;..\..\NpapiCore\Release\NpapiCore.lib;..\..\ScriptingCore\Release\ScriptingCore.lib;..\..\PluginCore\Release\PluginCore.lib;..\..\boost\libs\thread\Release\boost_thread.lib;..\..\boost\libs\system\Release\boost_system.lib;..\..\fblibs\log4cplus\src\Release\log4cplus.lib;psapi.lib;Wininet.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/Release/npFBTestPlugin.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ModuleDefinitionFile>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/gen/FireBreathWin.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>K:/workspace/firebreath-1/buildex/bin/FBTestPlugin/Release/npFBTestPlugin.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR="MinSizeRel";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"MinSizeRel\";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\MinSizeRel\ActiveXCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;PluginAuto\MinSizeRel\FBTP_PluginAuto.lib;..\..\NpapiCore\MinSizeRel\NpapiCore.lib;..\..\ScriptingCore\MinSizeRel\ScriptingCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;..\..\boost\libs\thread\MinSizeRel\boost_thread.lib;..\..\boost\libs\system\MinSizeRel\boost_system.lib;..\..\fblibs\log4cplus\src\MinSizeRel\log4cplus.lib;psapi.lib;Wininet.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/MinSizeRel/npFBTestPlugin.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ModuleDefinitionFile>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/gen/FireBreathWin.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>K:/workspace/firebreath-1/buildex/bin/FBTestPlugin/MinSizeRel/npFBTestPlugin.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR="RelWithDebInfo";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"RelWithDebInfo\";FBTestPlugin_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\log4cplus\include;K:\workspace\firebreath-1\buildex\fblibs\FBTestPlugin\log4cplus\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\RelWithDebInfo\ActiveXCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;PluginAuto\RelWithDebInfo\FBTP_PluginAuto.lib;..\..\NpapiCore\RelWithDebInfo\NpapiCore.lib;..\..\ScriptingCore\RelWithDebInfo\ScriptingCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;..\..\boost\libs\thread\RelWithDebInfo\boost_thread.lib;..\..\boost\libs\system\RelWithDebInfo\boost_system.lib;..\..\fblibs\log4cplus\src\RelWithDebInfo\log4cplus.lib;psapi.lib;Wininet.lib;ws2_32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/RelWithDebInfo/npFBTestPlugin.lib</ImportLibrary>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ModuleDefinitionFile>K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/gen/FireBreathWin.def</ModuleDefinitionFile>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>K:/workspace/firebreath-1/buildex/bin/FBTestPlugin/RelWithDebInfo/npFBTestPlugin.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\examples\FBTestPlugin\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\Win\projectDef.cmake;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\Win\projectDef.cmake;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\Win\projectDef.cmake;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:/workspace/firebreath-1/examples/FBTestPlugin/CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;K:\workspace\firebreath-1\examples\FBTestPlugin\Win\projectDef.cmake;K:\workspace\firebreath-1\examples\FBTestPlugin\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\projects\FBTestPlugin\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestMathPlugin.h" />
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestPlugin.h" />
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestPluginAPI.h" />
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\SimpleMathAPI.h" />
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\SimpleStreams.h" />
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\ThreadRunnerAPI.h" />
+    <ClInclude Include="gen\rcgen.sh.in" />
+    <ClInclude Include="gen\global\axplugin_defs.h" />
+    <ClInclude Include="gen\global\COM_config.h" />
+    <ClInclude Include="gen\global\config.h" />
+    <ClInclude Include="gen\global\resource.h" />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\Factory.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestMathPlugin.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestPlugin.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestPluginAPI.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\SimpleMathAPI.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\SimpleStreams.cpp"  />
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\ThreadRunnerAPI.cpp"  />
+    <ResourceCompile Include="gen\firebreathWin.rc"  />
+    <None Include="..\..\..\examples\FBTestPlugin\PluginConfig.cmake" />
+    <None Include="..\..\..\examples\FBTestPlugin\place_holder.html" />
+    <None Include="..\..\..\examples\FBTestPlugin\switcher.html" />
+    <None Include="..\..\..\examples\FBTestPlugin\test.html" />
+    <None Include="gen\ExportList_plugin.txt" />
+    <None Include="gen\FBControl.htm" />
+    <None Include="gen\FBControl.rgs" />
+    <None Include="gen\FireBreathWin.rgs" />
+    <None Include="gen\global" />
+    <None Include="gen\README.txt" />
+    <None Include="gen\version_script.txt" />
+    <None Include="gen\global\axplugin_defs.inc" />
+    <None Include="..\..\..\examples\FBTestPlugin\Win\projectDef.cmake" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/ActiveXCore/ActiveXCore.vcxproj">
+      <Project>A9F31607-4EC6-42C9-B400-1BDFCA321ADF</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/projects/FBTestPlugin/PluginAuto/FBTP_PluginAuto.vcxproj">
+      <Project>4E760E22-C93F-4BC4-8EE2-FC87CCD1050F</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/NpapiCore/NpapiCore.vcxproj">
+      <Project>A81D1863-CD2B-44D9-8591-512F1BECF555</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/PluginCore/PluginCore.vcxproj">
+      <Project>CCDF184C-3DEC-4DA8-AE6E-44347428D637</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/ScriptingCore/ScriptingCore.vcxproj">
+      <Project>25259D3D-E0F6-409A-8116-06350B394052</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/ZERO_CHECK.vcxproj">
+      <Project>CFB21E4A-E5A2-4550-B6E7-64029EA7E3BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/boost/libs/system/boost_system.vcxproj">
+      <Project>DA7B17F4-4AF3-437D-8423-67D5B6DEC785</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/boost/libs/thread/boost_thread.vcxproj">
+      <Project>BF5DB7F2-20D1-48FD-8C11-9C082C8C9728</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/fblibs/log4cplus/src/log4cplus.vcxproj">
+      <Project>AE07F25A-57EB-4154-8D27-90030A1172F0</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

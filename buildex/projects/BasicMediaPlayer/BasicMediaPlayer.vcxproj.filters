@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\examples\BasicMediaPlayer\BasicMediaPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\BasicMediaPlayer\BasicMediaPlayerPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\BasicMediaPlayer\Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\BasicMediaPlayer\Win\error_mapping.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\BasicMediaPlayer\Win\MediaPlayerWin.cpp">
+      <Filter>Win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\examples\BasicMediaPlayer\BasicMediaPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\BasicMediaPlayer\BasicMediaPlayerPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\BasicMediaPlayer\MediaPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\BasicMediaPlayer\Win\error_mapping.h">
+      <Filter>Win</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\examples\BasicMediaPlayer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\examples\BasicMediaPlayer\PluginConfig.cmake" />
+    <None Include="gen\FBControl.rgs" />
+    <None Include="gen\FireBreathWin.rgs" />
+    <None Include="gen\FBControl.htm" />
+    <None Include="..\..\..\examples\BasicMediaPlayer\Win\projectDef.cmake">
+      <Filter>Win</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gen\firebreathWin.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F29E3CC6-87FC-4BE2-A698-C04529D8E0E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5B05D48D-307B-4770-AD8C-B4EF3B23CFA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win">
+      <UniqueIdentifier>{7CBCF4BA-203A-4D71-A86D-9D65D50592BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{99DDFD0A-F973-4A65-A3C4-D40468C2ABC5}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>boost_regex</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">boost_regex.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">boost_regex</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">boost_regex.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">boost_regex</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">boost_regex.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">boost_regex</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">boost_regex.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">boost_regex</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\tests\ScriptingCoreTest;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\tests\unittest-cpp\UnitTest++\src;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\src\3rdParty\boost\libs\regex\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:/workspace/firebreath-1/src/3rdParty/boost/libs/regex/CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;K:\workspace\firebreath-1\src\3rdParty\boost\libs\regex\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\boost\libs\regex\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\cpp_regex_traits.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\cregex.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\c_regex_traits.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\fileiter.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\icu.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\instances.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\posix_api.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\regex.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\regex_debug.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\regex_raw_buffer.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\regex_traits_defaults.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\static_mutex.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\usinstances.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\w32_regex_traits.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\wc_regex_traits.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\wide_posix_api.cpp"  />
+    <ClCompile Include="..\..\..\..\src\3rdParty\boost\libs\regex\src\winstances.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/ZERO_CHECK.vcxproj">
+      <Project>CFB21E4A-E5A2-4550-B6E7-64029EA7E3BB</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

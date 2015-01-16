@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{25259D3D-E0F6-409A-8116-06350B394052}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ScriptingCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ScriptingCore.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ScriptingCore</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ScriptingCore.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ScriptingCore</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ScriptingCore.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ScriptingCore</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ScriptingCore.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ScriptingCore</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\ScriptingCore\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HK:/workspace/firebreath-1 -BK:/workspace/firebreath-1/buildex --check-stamp-file K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:/workspace/firebreath-1/src/ScriptingCore/CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;K:\workspace\firebreath-1\src\ScriptingCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">K:\workspace\firebreath-1\buildex\ScriptingCore\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ScriptingCore\APITypes.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\variant.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\variant_conversions.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\variant_list.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\variant_map.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\TypeIDMap.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\utf8_tools.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\URI.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\SafeQueue.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSExceptions.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\FBPointers.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\ShareableReference.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\logging.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\DOM.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Document.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Element.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Node.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\DOM\Window.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\Util\JSFakeArray.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\Util\meta_util.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\Util\meta_util_impl.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\Util\typesafe_event.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPI.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIAuto.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIImpl.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPIProxy.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSAPISimple.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\BrowserHost.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSObject.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\CrossThreadCall.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\AsyncFunctionCall.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\MethodConverter.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\PropertyConverter.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSCallback.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSFunction.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\JSEvent.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\ConverterUtils.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\TestJSAPI.h" />
+    <ClInclude Include="..\..\src\ScriptingCore\precompiled_headers.h" />
+    <ClCompile Include="..\..\src\ScriptingCore\variant.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\utf8_tools.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\URI.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Document.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Element.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Node.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\DOM\Window.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\Util\JSFakeArray.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIAuto.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIImpl.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPIProxy.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSAPISimple.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\BrowserHost.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\CrossThreadCall.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSFunction.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\JSEvent.cpp"  />
+    <ClCompile Include="..\..\src\ScriptingCore\precompiled_headers.cpp"  />
+    <None Include="..\..\src\ScriptingCore\dispatch_gen.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/ZERO_CHECK.vcxproj">
+      <Project>CFB21E4A-E5A2-4550-B6E7-64029EA7E3BB</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/boost/libs/system/boost_system.vcxproj">
+      <Project>DA7B17F4-4AF3-437D-8423-67D5B6DEC785</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/buildex/boost/libs/thread/boost_thread.vcxproj">
+      <Project>BF5DB7F2-20D1-48FD-8C11-9C082C8C9728</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestMathPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\FBTestPluginAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\SimpleMathAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\SimpleStreams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\examples\FBTestPlugin\ThreadRunnerAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestMathPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\FBTestPluginAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\SimpleMathAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\SimpleStreams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\examples\FBTestPlugin\ThreadRunnerAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\rcgen.sh.in">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\axplugin_defs.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\COM_config.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\config.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\resource.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\examples\FBTestPlugin\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\examples\FBTestPlugin\PluginConfig.cmake" />
+    <None Include="..\..\..\examples\FBTestPlugin\place_holder.html" />
+    <None Include="..\..\..\examples\FBTestPlugin\switcher.html" />
+    <None Include="..\..\..\examples\FBTestPlugin\test.html" />
+    <None Include="gen\ExportList_plugin.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FBControl.htm">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FBControl.rgs">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FireBreathWin.rgs">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\global">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\README.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\version_script.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\global\axplugin_defs.inc">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="..\..\..\examples\FBTestPlugin\Win\projectDef.cmake">
+      <Filter>Win</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gen\firebreathWin.rc">
+      <Filter>Generated</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F29E3CC6-87FC-4BE2-A698-C04529D8E0E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5B05D48D-307B-4770-AD8C-B4EF3B23CFA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{B6577DCF-9C57-4CC1-B839-97A9A3249F56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win">
+      <UniqueIdentifier>{7CBCF4BA-203A-4D71-A86D-9D65D50592BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

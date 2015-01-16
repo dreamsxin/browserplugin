@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\NpapiCore\NPJavascriptObject.cpp">
+      <Filter>NpapiScripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NPObjectAPI.cpp">
+      <Filter>NpapiScripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiBrowserHost.cpp">
+      <Filter>NpapiScripting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiPlugin.cpp">
+      <Filter>NpapiPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiPluginModule.cpp">
+      <Filter>NpapiPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiPluginModule_NPP.cpp">
+      <Filter>NpapiPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiStream.cpp">
+      <Filter>NpapiPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\NpapiTypes.cpp">
+      <Filter>NpapiPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\Win\NpapiBrowserHostAsyncWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NpapiCore\precompiled_headers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\NpapiCore\NPJavascriptObject.h">
+      <Filter>NpapiScripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NPObjectAPI.h">
+      <Filter>NpapiScripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiBrowserHost.h">
+      <Filter>NpapiScripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NPVariantUtil.h">
+      <Filter>NpapiScripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiPlugin.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiPluginFactory.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiPluginModule.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiStream.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiTypes.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\NpapiFactoryDefinitions.h">
+      <Filter>NpapiPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\Win\NpapiBrowserHostAsyncWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\NpapiCore\precompiled_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\NpapiCore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F29E3CC6-87FC-4BE2-A698-C04529D8E0E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5B05D48D-307B-4770-AD8C-B4EF3B23CFA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NpapiScripting">
+      <UniqueIdentifier>{F1786098-B50C-4570-A9A5-E533D42515D1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NpapiPlugin">
+      <UniqueIdentifier>{E2619035-F10E-4539-9AA6-F07794901DD7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{5B9FFA5E-361B-4999-BAF7-D693F1833957}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

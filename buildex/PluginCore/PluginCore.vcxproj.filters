@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\PluginCore\BrowserPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\BrowserStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\BrowserStreamManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\DefaultBrowserStreamHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\FactoryBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\PluginCore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\PluginEventSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\precompiled_headers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\SimpleStreamHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\TimerService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\Win\KeyCodesWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\Win\SystemHelpersWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\Win\SystemProxyDetectorWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PluginCore\Win\WinMessageWindow.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\PluginCore\AsyncDrawService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\BrowserPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\BrowserStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\BrowserStreamManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\BrowserStreamRequest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\ConstructDefaultPluginWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\DefaultBrowserStreamHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\FactoryBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEventSink.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEventSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginWindowForwardDecl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\precompiled_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\SimpleStreamHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\SystemHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\SystemProxyDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\TimerService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\AttachedEvent.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\DrawingEvents.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\GeneralEvents.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\KeyboardEvents.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\KeyCodes.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\MacEventCarbon.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\MacEventCocoa.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\MouseEvents.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\StreamEvents.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\WindowsEvent.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\X11Event.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\PluginEvents\X11NativeGdkEvent.h">
+      <Filter>PluginEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Win\KeyCodesWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Win\SystemProxyDetectorWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Win\WindowContextWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Win\WinMessageWindow.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Mac\OneShotManager.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Mac\SystemProxyDetectorMac.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Mac\SystemProxyDetectorMac.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Mac\OneShotManager.mm">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\Mac\SystemHelpersMac.mm">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\X11\SystemProxyDetectorX11.h">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\X11\SystemHelpersX11.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\PluginCore\X11\SystemProxyDetectorX11.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\PluginCore\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F29E3CC6-87FC-4BE2-A698-C04529D8E0E8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5B05D48D-307B-4770-AD8C-B4EF3B23CFA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PluginEvents">
+      <UniqueIdentifier>{009EFCBE-B281-469D-958B-BDC22415CF04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="X11">
+      <UniqueIdentifier>{A5051432-3D02-43F0-A28F-53E99EFDE9B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{5B9FFA5E-361B-4999-BAF7-D693F1833957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mac">
+      <UniqueIdentifier>{5FC7E2EC-5529-41FB-B884-6E6214BA8081}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

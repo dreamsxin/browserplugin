@@ -1,0 +1,21 @@
+# CMake generation dependency list for this directory.
+K:/workspace/firebreath-1/src/libs/log4cplus/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.1/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CMakeParseArguments.cmake
+K:/workspace/firebreath-1/src/libs/log4cplus/ConfigureChecks.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.1/Modules/CheckCXXSourceCompiles.cmake
+K:/workspace/firebreath-1/src/libs/log4cplus/include/log4cplus/config.h.cmake.in
+K:/workspace/firebreath-1/src/libs/log4cplus/include/log4cplus/config/defines.hxx.cmake.in
