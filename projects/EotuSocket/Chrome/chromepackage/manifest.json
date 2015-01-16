@@ -1,0 +1,9 @@
+{
+  "name": "EotuSocket",
+  "version": "${FBSTRING_PLUGIN_VERSION}",
+  "description": "Eotu Socket Plugin",
+
+	"plugins": [
+    { "path": "npEotuSocket.dll", "public": true }
+  ]
+}

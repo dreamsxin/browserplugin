@@ -1,0 +1,16 @@
+K:/workspace/firebreath-1/build/unittest-cpp/UnitTest++/CMakeFiles/UnitTest++.dir
+K:/workspace/firebreath-1/build/cmake_common/CMakeFiles/FireBreath_Cmake.dir
+K:/workspace/firebreath-1/build/projects/EotuSocket/PluginAuto/CMakeFiles/EOTU_PluginAuto.dir
+K:/workspace/firebreath-1/build/projects/EotuSocket/CMakeFiles/EotuSocket.dir
+K:/workspace/firebreath-1/build/boost/libs/thread/CMakeFiles/boost_thread.dir
+K:/workspace/firebreath-1/build/ScriptingCoreTest/CMakeFiles/UnitTest_ScriptingCore.dir
+K:/workspace/firebreath-1/build/ScriptingCore/CMakeFiles/ScriptingCore.dir
+K:/workspace/firebreath-1/build/ActiveXCoreTest/CMakeFiles/UnitTest_ActiveXCore.dir
+K:/workspace/firebreath-1/build/boost/libs/date_time/CMakeFiles/boost_date_time.dir
+K:/workspace/firebreath-1/build/ScriptingCoreTest/CMakeFiles/ALL_BUILD.dir
+K:/workspace/firebreath-1/build/PluginCore/CMakeFiles/PluginCore.dir
+K:/workspace/firebreath-1/build/NpapiCore/CMakeFiles/NpapiCore.dir
+K:/workspace/firebreath-1/build/boost/libs/regex/CMakeFiles/boost_regex.dir
+K:/workspace/firebreath-1/build/CMakeFiles/ZERO_CHECK.dir
+K:/workspace/firebreath-1/build/boost/libs/system/CMakeFiles/boost_system.dir
+K:/workspace/firebreath-1/build/ActiveXCore/CMakeFiles/ActiveXCore.dir

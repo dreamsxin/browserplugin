@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\PluginInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\precompiled_headers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\null\NullLogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\axmain.cpp">
+      <Filter>WindowsATL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\axPluginObjects.cpp">
+      <Filter>WindowsATL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\dllmain.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\FireBreathWin.cpp">
+      <Filter>WindowsATL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\NpapiPluginWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\np_winmain.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\PluginWindowlessWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\PluginAuto\Win\PluginWindowWin.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\gen\FireBreathWin_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\precompiled_headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Win\axmain.h">
+      <Filter>WindowsATL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Win\NpapiPluginWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Win\PluginWindowlessWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Win\PluginWindowWin.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\gen\FireBreathWin.tlb" />
+    <ClInclude Include="..\gen\FireBreathWin_i.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\NpapiPluginMac.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginEventMac.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginWindowMac.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\FactoryDummiesMac.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginEventMac.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\NpapiPluginMac.mm">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginWindowMac.mm">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\np_macmain.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginWindowMacCG.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginWindowMacCG.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\KeyCodesCocoa.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginEventMacCocoa.h">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\PluginEventMacCocoa.mm">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\Mac\KeyCodesCocoa.cpp">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\KeyCodesX11.h">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\NpapiPluginX11.h">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\PluginWindowX11.h">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\WindowContextX11.h">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\KeyCodesX11.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\NpapiPluginX11.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\np_x11main.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\src\PluginAuto\X11\PluginWindowX11.cpp">
+      <Filter>X11</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\..\src\PluginAuto\CMakeLists.txt" />
+    <CustomBuild Include="..\..\..\CMakeFiles\38902fc3c7f14e4e4e6f7bc1341d4c21\FireBreathWin.tlb.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\src\PluginAuto\DONTTOUCHTHISPROJECT.txt" />
+    <None Include="..\..\..\..\src\PluginAuto\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E2EBF94F-9151-4014-B4B5-99B71BB36C8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6FE4EA2A-AFF8-4497-862F-19F08E9D5F79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B007966C-8A1E-4D5C-9A10-5522C177FB1F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="X11">
+      <UniqueIdentifier>{4DA4F883-6A35-4F3A-A5C7-0A09DED29F33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{AC6422ED-C8BD-475D-BD70-21D6B1482274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowsATL">
+      <UniqueIdentifier>{B57E72A0-081A-4DB4-9012-D90085DA1D61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mac">
+      <UniqueIdentifier>{88DE3D39-0F98-4ACE-AD5B-DCA9DFEA5B75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

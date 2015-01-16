@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\projects\EotuSocket\EotuSocket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\projects\EotuSocket\EotuSocketAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\projects\EotuSocket\Factory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocketAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\rcgen.sh.in">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\axplugin_defs.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\COM_config.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\config.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\global\resource.h">
+      <Filter>Generated</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\projects\EotuSocket\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\projects\EotuSocket\PluginConfig.cmake" />
+    <None Include="gen\ExportList_plugin.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FBControl.htm">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FBControl.rgs">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FireBreathWin.rgs">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\global">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\README.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\version_script.txt">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\global\axplugin_defs.inc">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="..\..\..\projects\EotuSocket\Win\projectDef.cmake">
+      <Filter>Win</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gen\firebreathWin.rc">
+      <Filter>Generated</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E2EBF94F-9151-4014-B4B5-99B71BB36C8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6FE4EA2A-AFF8-4497-862F-19F08E9D5F79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated">
+      <UniqueIdentifier>{FDC0BEA7-4E72-4E46-BDA3-7A0A8BE6FCF4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Win">
+      <UniqueIdentifier>{DC5DD142-EF4D-4FFD-98FD-E11A3A6C16E7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

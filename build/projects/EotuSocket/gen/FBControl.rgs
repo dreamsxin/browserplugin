@@ -1,0 +1,66 @@
+HKCR {
+    GuoSheng.EotuSocket.1 = s 'Eotu Socket Plugin' {
+        CLSID = s '{fc8f0121-8871-5e3a-b1e2-5233a5135a0c}'
+    }
+    GuoSheng.EotuSocket = s 'Eotu Socket Plugin' {
+        CLSID = s '{fc8f0121-8871-5e3a-b1e2-5233a5135a0c}'
+        CurVer = s 'GuoSheng.EotuSocket.1'
+    }
+    NoRemove CLSID {
+        ForceRemove {fc8f0121-8871-5e3a-b1e2-5233a5135a0c} = s 'Eotu Socket Plugin' {
+            ProgID = s 'GuoSheng.EotuSocket.1'
+            VersionIndependentProgID = s 'GuoSheng.EotuSocket'
+            ForceRemove 'Programmable'
+            InprocServer32 = s '%MODULE%' {
+                val ThreadingModel = s '%THREADING%'
+            }
+            val AppID = s '%APPID%'
+            ForceRemove 'Control'
+            'MiscStatus' = s '0' {
+                '1' = s '131473'
+            }
+            'TypeLib' = s '%LIBID%'
+            'Version' = s '1'
+        }
+    }
+    NoRemove MIME {
+        NoRemove Database {
+            NoRemove 'Content Type' {
+                'application/x-eotusocket' = s 'Eotu Socket Plugin' {
+                    val Extension = s ''
+                    val CLSID = s '{fc8f0121-8871-5e3a-b1e2-5233a5135a0c}'
+                }
+            }
+        }
+    }            
+}
+HKCU {
+    NoRemove Software {
+        NoRemove Microsoft {
+            NoRemove Windows {
+                NoRemove CurrentVersion {
+                    NoRemove Ext {
+                        NoRemove PreApproved {
+                            ForceRemove '{fc8f0121-8871-5e3a-b1e2-5233a5135a0c}'
+                        }
+                        NoRemove Stats {
+                            ForceRemove '{fc8f0121-8871-5e3a-b1e2-5233a5135a0c}' {
+                                iexplore {
+                                    AllowedDomains {
+                                        '*'
+                                    }
+                                    val Count = d '0'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        NoRemove MozillaPlugins {
+            ForceRemove 'eotu.com/EotuSocket' {
+                val Path = s '%MODULE%'
+            }
+        }
+    }
+}
