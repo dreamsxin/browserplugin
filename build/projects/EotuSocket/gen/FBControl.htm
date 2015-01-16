@@ -50,9 +50,14 @@
         
         function testConnect()
         {
-            plugin().connect('localhost', 80, function(msg) {
+            sockid = plugin().connect('192.168.1.108', 81, function(msg) {
 				alert("rec:" + msg);
-			});
+			}, true);
+			alert(sockid);
+            sockid = plugin().connect('192.168.1.108', 81, function(msg) {
+				alert("rec:" + msg);
+			}, false);
+			alert(sockid);
         }
         
         function pluginValid()

@@ -6,10 +6,12 @@
 
 #include <string>
 #include <sstream>
+#include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
 #include <boost/thread/thread.hpp>
 #include "Source/MessageIdentifiers.h"
 #include "Source/RakPeerInterface.h"
+#include "Source/PacketizedTCP.h"
 #include "Source/RakNetTypes.h"
 #include "Source/BitStream.h"
 #include "Source/TCPInterface.h"
@@ -57,12 +59,7 @@ public:
 
 
 		registerMethod("connect",      make_method(this, &EotuSocketAPI::connect));
-		registerMethod("receive",      make_method(this, &EotuSocketAPI::receive));
-
-
-		RakNet::SocketDescriptor socketDescriptor(0, 0);
-		client = RakNet::RakPeerInterface::GetInstance();
-		client->Startup(1, &socketDescriptor, 1);
+		registerMethod("send",      make_method(this, &EotuSocketAPI::send));
     }
 
     ///////////////////////////////////////////////////////////////////////////////
@@ -73,7 +70,10 @@ public:
     ///         the plugin is released.
     ///////////////////////////////////////////////////////////////////////////////
     virtual ~EotuSocketAPI() {
-		RakNet::RakPeerInterface::DestroyInstance(client);
+		for (std::size_t i = 0; i < threads.size(); ++i) {
+			threads[i]->interrupt();
+			threads[i]->join();
+		}
 	};
 
     EotuSocketPtr getPlugin();
@@ -96,13 +96,17 @@ public:
 	void testEvent();
 
 	// Method connect
-	bool connect(const std::string& host, const int port, const FB::JSObjectPtr &callback);
-	// Method receive
-	void receive(const FB::JSObjectPtr &callback);
+	int connect(const std::string& host, const int port, const FB::JSObjectPtr &callback, const bool useTCP = false);
+	// Method send
+	void send(const int sock, const std::string& data);
+
+	void receiveUDP(RakNet::RakPeerInterface * client, const FB::JSObjectPtr &callback);
+	void receiveTCP(RakNet::PacketizedTCP *client, const FB::JSObjectPtr &callback);
 
 	// Event
 	FB_JSAPI_EVENT(Connected, 0, ());
 	FB_JSAPI_EVENT(StatusChange, 2, (const int, const FB::variant&));
+	FB_JSAPI_EVENT(Debug, 1, (const FB::variant&));
 
 private:
     EotuSocketWeakPtr m_plugin;
@@ -110,8 +114,10 @@ private:
 
 	std::string m_testString;
 
-	boost::thread m_thread;
-	RakNet::RakPeerInterface *client;
+	std::vector<boost::shared_ptr<boost::thread>> threads;
+	std::map<int, RakNet::RakPeerInterface*> udpClients;
+	std::map<int, RakNet::PacketizedTCP*> tcpClients;
+	std::map<int, RakNet::SystemAddress> systemAddresses;
 };
 
 #endif // H_EotuSocketAPI
