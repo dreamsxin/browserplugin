@@ -19,6 +19,7 @@
 #include "Source/RakString.h"
 #include "Source/Gets.h"
 #include "Source/Getche.h"
+#include "Source/DS_OrderedList.h"
 #include "JSAPIAuto.h"
 #include "BrowserHost.h"
 #include "EotuSocket.h"
@@ -60,6 +61,8 @@ public:
 
 		registerMethod("connect",      make_method(this, &EotuSocketAPI::connect));
 		registerMethod("send",      make_method(this, &EotuSocketAPI::send));
+
+		m_lastsock = 0;
     }
 
     ///////////////////////////////////////////////////////////////////////////////
@@ -98,10 +101,10 @@ public:
 	// Method connect
 	int connect(const std::string& host, const int port, const FB::JSObjectPtr &callback, const bool useTCP = false);
 	// Method send
-	void send(const int sock, const std::string& data);
+	bool send(const int sock, const std::string& data);
 
-	void receiveUDP(RakNet::RakPeerInterface * client, const FB::JSObjectPtr &callback);
-	void receiveTCP(RakNet::PacketizedTCP *client, const FB::JSObjectPtr &callback);
+	void receiveUDP(const int sock, const FB::JSObjectPtr &callback);
+	void receiveTCP(const int sock, const FB::JSObjectPtr &callback);
 
 	// Event
 	FB_JSAPI_EVENT(Connected, 0, ());
@@ -114,10 +117,20 @@ private:
 
 	std::string m_testString;
 
+	int m_lastsock;
+
 	std::vector<boost::shared_ptr<boost::thread>> threads;
-	std::map<int, RakNet::RakPeerInterface*> udpClients;
-	std::map<int, RakNet::PacketizedTCP*> tcpClients;
-	std::map<int, RakNet::SystemAddress> systemAddresses;
+
+	struct Client
+	{
+		int sock;
+		bool useTCP;
+		RakNet::PacketizedTCP *tcpPeer;
+		RakNet::RakPeerInterface *udpPeer;
+		RakNet::SystemAddress systemAddresses;
+	};
+
+	std::map<int, Client*> clients;
 };
 
 #endif // H_EotuSocketAPI
