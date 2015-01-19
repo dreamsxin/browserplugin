@@ -100,7 +100,7 @@ public:
 	void testEvent();
 
 	// Method connect
-	int connect(const std::string& host, const int port, const FB::JSObjectPtr &callback, const bool useTCP = false);
+	int connect(const std::string& host, const int port, const FB::VariantMap& options);
 	// Method send
 	bool send(const int sock, const std::string& data);
 
