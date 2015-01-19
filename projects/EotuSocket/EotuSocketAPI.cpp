@@ -65,25 +65,13 @@ void EotuSocketAPI::testEvent()
     fire_test();
 }
 
-int EotuSocketAPI::connect(const std::string& host, const int port, const FB::VariantMap& options)
+int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JSObjectPtr& callback)
 {
 	bool tcp = false;
-	FB::VariantMap::const_iterator fnd;
-	fnd = options.find("tcp");
-	if (fnd != options.end()) {
-		tcp = fnd->second.convert_cast<bool>();
-	}
-	FB::JSObjectPtr callback;
-	fnd = options.find("callback");
-	if (fnd != options.end()) {
-		try {
-			callback = fnd->second.convert_cast<FB::JSObjectPtr>();
-		} catch(FB::bad_variant_cast& e) {
-			throw FB::script_error("callback not javascript object");
-		}
-	} else {
-		//throw FB::script_error("wrong number of arguments");
-		//throw FB::invalid_arguments();
+	try {
+		tcp = callback->GetProperty("tcp").convert_cast<bool>();
+	} catch(FB::bad_variant_cast& e) {
+		throw FB::script_error(e.what());
 	}
 
 	if (!tcp) {
