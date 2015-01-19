@@ -130,6 +130,7 @@ private:
 		RakNet::RakPeerInterface *udpPeer;
 		RakNet::SystemAddress systemAddresses;
 		bool connected;
+		bool closed;
 	};
 
 	std::map<int, Client*> clients;

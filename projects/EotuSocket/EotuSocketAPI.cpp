@@ -84,6 +84,7 @@ int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JS
 		client->udpPeer = peer;
 		client->systemAddresses = RakNet::UNASSIGNED_SYSTEM_ADDRESS;
 		client->connected = false;
+		client->closed = false;
 		clients[m_lastsock] = client;
 		boost::shared_ptr<boost::thread> thread(new boost::thread(boost::bind(&EotuSocketAPI::receiveUDP, this, m_lastsock, callback)));
 		threads.push_back(thread);
@@ -102,6 +103,7 @@ int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JS
 		client->tcpPeer = peer;
 		client->systemAddresses = server;
 		client->connected = false;
+		client->closed = false;
 		clients[m_lastsock] = client;
 		boost::shared_ptr<boost::thread> thread(new boost::thread(boost::bind(&EotuSocketAPI::receiveTCP, this, m_lastsock, callback)));
 		threads.push_back(thread);
@@ -164,7 +166,7 @@ void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
 
 			case ID_CONNECTION_LOST:
 				{
-					client->connected = false;
+					client->closed = true;
 					fire_StatusChange(ID_CONNECTION_LOST, "ID_CONNECTION_LOST");
 					goto close;
 				}
@@ -218,6 +220,18 @@ void EotuSocketAPI::receiveTCP(const int sock, const FB::JSObjectPtr &callback)
 	RakNet::Packet* packet;
 	while (!boost::this_thread::interruption_requested())
 	{
+		for (packet=peer->Receive(); packet; peer->DeallocatePacket(packet), packet=peer->Receive()) {
+			fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
+			RakNet::RakString incomingTemp = RakNet::RakString::NonVariadic((const char*) packet->data);
+			try {
+				callback->Invoke("", FB::variant_list_of(incomingTemp.C_String()));
+			} catch (const FB::script_error& ex) {
+				m_host->htmlLog(std::string("Function call failed with ") + ex.what());
+			}
+		}
+		if (client->closed == true) {
+			goto close;
+		}
 		RakNet::SystemAddress notificationAddress;
 		if (client->connected == false) {
 			RakNet::Time timeout = RakNet::GetTime()+3000;
@@ -244,25 +258,14 @@ void EotuSocketAPI::receiveTCP(const int sock, const FB::JSObjectPtr &callback)
 
 		notificationAddress = peer->HasFailedConnectionAttempt();
 		if (notificationAddress!=RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
-			client->connected = false;
 			fire_StatusChange(ID_CONNECTION_ATTEMPT_FAILED, "ID_CONNECTION_ATTEMPT_FAILED");
 			goto close;
 			break;
 		}
 		notificationAddress = peer->HasLostConnection();
 		if (notificationAddress!=RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
-			client->connected = false;
+			client->closed = true;
 			fire_StatusChange(ID_CONNECTION_LOST, "ID_CONNECTION_LOST");
-			goto close;
-			break;
-		}
-		for (packet=peer->Receive(); packet; peer->DeallocatePacket(packet), packet=peer->Receive()) {
-			fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
-			try {
-				callback->Invoke("", FB::variant_list_of(packet->data));
-			} catch (const FB::script_error& ex) {
-				m_host->htmlLog(std::string("Function call failed with ") + ex.what());
-			}
 		}
 		RakSleep(30);
 	}
