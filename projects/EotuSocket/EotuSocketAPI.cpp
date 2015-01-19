@@ -83,24 +83,25 @@ int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JS
 		client->sock = m_lastsock;
 		client->udpPeer = peer;
 		client->systemAddresses = RakNet::UNASSIGNED_SYSTEM_ADDRESS;
+		client->connected = false;
 		clients[m_lastsock] = client;
 		boost::shared_ptr<boost::thread> thread(new boost::thread(boost::bind(&EotuSocketAPI::receiveUDP, this, m_lastsock, callback)));
 		threads.push_back(thread);
 	} else {
-		// RakNet::TCPInterface *peer = RakNet::TCPInterface::GetInstance();
-		RakNet::PacketizedTCP *peer = RakNet::PacketizedTCP::GetInstance();
-		if (peer->Start(0, 1) == false) {
+		RakNet::TCPInterface *peer = RakNet::TCPInterface::GetInstance();
+		if (peer->Start(0, 32) == false) {
 			return -1;
 		}
 
-		peer->Connect(host.c_str(), port, NULL, 0, 0);
+		RakNet::SystemAddress server = peer->Connect(host.c_str(), port, false);
 
 		++m_lastsock;
 		Client *client = RakNet::OP_NEW<Client>(__FILE__, __LINE__);
 		client->useTCP = useTCP;
 		client->sock = m_lastsock;
 		client->tcpPeer = peer;
-		client->systemAddresses = RakNet::UNASSIGNED_SYSTEM_ADDRESS;
+		client->systemAddresses = server;
+		client->connected = false;
 		clients[m_lastsock] = client;
 		boost::shared_ptr<boost::thread> thread(new boost::thread(boost::bind(&EotuSocketAPI::receiveTCP, this, m_lastsock, callback)));
 		threads.push_back(thread);
@@ -114,14 +115,22 @@ bool EotuSocketAPI::send(const int sock, const std::string& data) {
 	if (clients.find(sock) == clients.end()) {
 		return false;
 	}
+	RakNet::RakString request;
+	request.Set("%s", data.c_str());
 	Client* client = clients[sock];
+	if (client->connected == false) {
+		fire_Debug("send fail not connected");
+	}
 	if (client->useTCP) {
-		RakNet::PacketizedTCP *tcpPeer = client->tcpPeer;
-		tcpPeer->Send(data.c_str(), data.length(), client->systemAddresses, false);
+		RakNet::TCPInterface *tcpPeer = client->tcpPeer;
+		tcpPeer->Send(request.C_String(), (unsigned int)request.GetLength(), client->systemAddresses, false);
+		fire_Debug(request.C_String());
+		fire_Debug(request.GetLength());
 	} else {
 		RakNet::RakPeerInterface *udpPeer = client->udpPeer;
-		udpPeer->Send(data.c_str(), data.length(), HIGH_PRIORITY, RELIABLE_ORDERED, 0, client->systemAddresses, false);	
+		udpPeer->Send(request.C_String(), (unsigned int)request.GetLength(), HIGH_PRIORITY, RELIABLE_ORDERED, 0, client->systemAddresses, false);	
 	}
+	return true;
 }
 
 void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
@@ -149,27 +158,28 @@ void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
 			case ID_REMOTE_CONNECTION_LOST:
 				{
 					fire_StatusChange(ID_REMOTE_CONNECTION_LOST, "ID_REMOTE_CONNECTION_LOST");
+					goto close;
 				}
 				break;
 
-			case ID_REMOTE_NEW_INCOMING_CONNECTION:
-				{
-					fire_StatusChange(ID_REMOTE_NEW_INCOMING_CONNECTION, "ID_REMOTE_NEW_INCOMING_CONNECTION");
-				}
-				break;
 			case ID_CONNECTION_LOST:
 				{
+					client->connected = false;
 					fire_StatusChange(ID_CONNECTION_LOST, "ID_CONNECTION_LOST");
+					goto close;
 				}
 				break;
 			case ID_CONNECTION_ATTEMPT_FAILED:
 				{
+					client->connected = false;
 					fire_StatusChange(ID_CONNECTION_ATTEMPT_FAILED, "ID_CONNECTION_ATTEMPT_FAILED");
+					goto close;
 				}
 				break;
 			case ID_CONNECTION_REQUEST_ACCEPTED:
 				{
 					client->systemAddresses = packet->systemAddress;
+					client->connected = true;
 					fire_StatusChange(ID_CONNECTION_REQUEST_ACCEPTED, "ID_CONNECTION_REQUEST_ACCEPTED");
 					fire_Connected();
 				}
@@ -188,12 +198,13 @@ void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
 				break;
 			}
 		}
-
-		boost::this_thread::sleep(boost::posix_time::seconds(1));
+		RakSleep(30);
 	}
+close:
 	peer->Shutdown(500,0);
 	RakNet::RakPeerInterface::DestroyInstance(peer);
 	fire_Debug("receiveUDP stop");
+	RakNet::OP_DELETE(client, _FILE_AND_LINE_);
 }
 
 void EotuSocketAPI::receiveTCP(const int sock, const FB::JSObjectPtr &callback)
@@ -202,49 +213,63 @@ void EotuSocketAPI::receiveTCP(const int sock, const FB::JSObjectPtr &callback)
 		return;
 	}
 	Client* client = clients[sock];
-	RakNet::PacketizedTCP *peer = client->tcpPeer;
+	RakNet::TCPInterface *peer = client->tcpPeer;
 	fire_Debug("receiveTCP");
-	RakNet::SystemAddress serverAddress;
 	RakNet::Packet* packet;
 	while (!boost::this_thread::interruption_requested())
 	{
 		RakNet::SystemAddress notificationAddress;
-		notificationAddress = peer->HasCompletedConnectionAttempt();
-		if (notificationAddress != RakNet::UNASSIGNED_SYSTEM_ADDRESS)
-		{
-			serverAddress = notificationAddress;
-			client->systemAddresses = serverAddress;
-			fire_StatusChange(ID_CONNECTION_REQUEST_ACCEPTED, "ID_CONNECTION_REQUEST_ACCEPTED");
-			fire_Connected();
+		if (client->connected == false) {
+			RakNet::Time timeout = RakNet::GetTime()+3000;
+			while (RakNet::GetTime() < timeout) {
+				notificationAddress = peer->HasCompletedConnectionAttempt();
+				if (notificationAddress != RakNet::UNASSIGNED_SYSTEM_ADDRESS)
+				{
+					client->systemAddresses = notificationAddress;
+					client->connected = true;
+					fire_StatusChange(ID_CONNECTION_REQUEST_ACCEPTED, "ID_CONNECTION_REQUEST_ACCEPTED");
+					fire_Connected();
+					break;
+				}
+				RakSleep(30);
+			}
+
+			if (notificationAddress == RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
+				client->connected = false;
+				fire_StatusChange(ID_CONNECTION_ATTEMPT_FAILED, "ID_CONNECTION_ATTEMPT_FAILED");
+				goto close;
+				break;
+			}
 		}
+
 		notificationAddress = peer->HasFailedConnectionAttempt();
 		if (notificationAddress!=RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
-			peer->CloseConnection(serverAddress);
+			client->connected = false;
 			fire_StatusChange(ID_CONNECTION_ATTEMPT_FAILED, "ID_CONNECTION_ATTEMPT_FAILED");
+			goto close;
 			break;
-		}
-		notificationAddress = peer->HasNewIncomingConnection();
-		if (notificationAddress!=RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
-			fire_StatusChange(ID_NEW_INCOMING_CONNECTION, "ID_NEW_INCOMING_CONNECTION");
 		}
 		notificationAddress = peer->HasLostConnection();
 		if (notificationAddress!=RakNet::UNASSIGNED_SYSTEM_ADDRESS) {
-			peer->CloseConnection(serverAddress);
+			client->connected = false;
 			fire_StatusChange(ID_CONNECTION_LOST, "ID_CONNECTION_LOST");
+			goto close;
 			break;
 		}
 		for (packet=peer->Receive(); packet; peer->DeallocatePacket(packet), packet=peer->Receive()) {
-			if(packet->systemAddress == serverAddress) {
-				fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
-				try {
-					callback->Invoke("", FB::variant_list_of(packet->data));
-				} catch (const FB::script_error& ex) {
-					m_host->htmlLog(std::string("Function call failed with ") + ex.what());
-				}
+			fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
+			try {
+				callback->Invoke("", FB::variant_list_of(packet->data));
+			} catch (const FB::script_error& ex) {
+				m_host->htmlLog(std::string("Function call failed with ") + ex.what());
 			}
 		}
+		RakSleep(30);
 	}
+close:
+	peer->CloseConnection(client->systemAddresses);
 	peer->Stop();
-	RakNet::PacketizedTCP::DestroyInstance(peer);
+	RakNet::TCPInterface::DestroyInstance(peer);
 	fire_Debug("receiveTCP stop");
+	RakNet::OP_DELETE(client, _FILE_AND_LINE_);
 }

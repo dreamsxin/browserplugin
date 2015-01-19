@@ -19,6 +19,7 @@
 #include "Source/RakString.h"
 #include "Source/Gets.h"
 #include "Source/Getche.h"
+#include "Source/GetTime.h"
 #include "Source/DS_OrderedList.h"
 #include "JSAPIAuto.h"
 #include "BrowserHost.h"
@@ -125,9 +126,10 @@ private:
 	{
 		int sock;
 		bool useTCP;
-		RakNet::PacketizedTCP *tcpPeer;
+		RakNet::TCPInterface *tcpPeer;
 		RakNet::RakPeerInterface *udpPeer;
 		RakNet::SystemAddress systemAddresses;
+		bool connected;
 	};
 
 	std::map<int, Client*> clients;
