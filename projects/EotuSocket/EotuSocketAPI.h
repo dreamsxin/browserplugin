@@ -62,6 +62,7 @@ public:
 
 		registerMethod("connect",      make_method(this, &EotuSocketAPI::connect));
 		registerMethod("send",      make_method(this, &EotuSocketAPI::send));
+		registerMethod("close",      make_method(this, &EotuSocketAPI::close));
 
 		m_lastsock = 0;
     }
@@ -74,10 +75,7 @@ public:
     ///         the plugin is released.
     ///////////////////////////////////////////////////////////////////////////////
     virtual ~EotuSocketAPI() {
-		for (std::size_t i = 0; i < threads.size(); ++i) {
-			threads[i]->interrupt();
-			threads[i]->join();
-		}
+		close();
 	};
 
     EotuSocketPtr getPlugin();
@@ -103,6 +101,13 @@ public:
 	int connect(const std::string& host, const int port, const FB::JSObjectPtr& callback);
 	// Method send
 	bool send(const int sock, const std::string& data);
+	// Method close
+	void close() {
+		for (std::size_t i = 0; i < threads.size(); ++i) {
+			threads[i]->interrupt();
+			threads[i]->join();
+		}
+	}
 
 	void receiveUDP(const int sock, const FB::JSObjectPtr &callback);
 	void receiveTCP(const int sock, const FB::JSObjectPtr &callback);
@@ -126,14 +131,14 @@ private:
 	{
 		int sock;
 		bool useTCP;
-		RakNet::TCPInterface *tcpPeer;
-		RakNet::RakPeerInterface *udpPeer;
+		boost::shared_ptr<RakNet::TCPInterface> tcpPeer;
+		boost::shared_ptr<RakNet::RakPeerInterface> udpPeer;
 		RakNet::SystemAddress systemAddresses;
 		bool connected;
 		bool closed;
 	};
 
-	std::map<int, Client*> clients;
+	std::map<int, boost::shared_ptr<Client>> clients;
 };
 
 #endif // H_EotuSocketAPI
