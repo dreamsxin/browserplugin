@@ -78,6 +78,10 @@ public:
 		close();
 	};
 
+	virtual void shutdown() {
+		close();
+	}
+
     EotuSocketPtr getPlugin();
 
     // Read/Write property ${PROPERTY.ident}
