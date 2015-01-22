@@ -131,7 +131,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\RakNet;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
@@ -162,7 +162,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Release\ActiveXCore.lib;..\..\PluginCore\Release\PluginCore.lib;PluginAuto\Release\EOTU_PluginAuto.lib;..\..\NpapiCore\Release\NpapiCore.lib;..\..\ScriptingCore\Release\ScriptingCore.lib;..\..\PluginCore\Release\PluginCore.lib;..\..\boost\libs\thread\Release\boost_thread.lib;..\..\boost\libs\system\Release\boost_system.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Release\ActiveXCore.lib;..\..\PluginCore\Release\PluginCore.lib;PluginAuto\Release\EOTU_PluginAuto.lib;..\..\NpapiCore\Release\NpapiCore.lib;..\..\ScriptingCore\Release\ScriptingCore.lib;..\..\boost\libs\thread\Release\boost_thread.lib;..\..\boost\libs\system\Release\boost_system.lib;Wininet.lib;..\..\Release\RakNet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>false</GenerateDebugInformation>
