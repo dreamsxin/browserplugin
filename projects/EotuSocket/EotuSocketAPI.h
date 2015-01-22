@@ -61,7 +61,9 @@ public:
 
 
 		registerMethod("connect",      make_method(this, &EotuSocketAPI::connect));
+		registerMethod("login",      make_method(this, &EotuSocketAPI::login));
 		registerMethod("send",      make_method(this, &EotuSocketAPI::send));
+		registerMethod("sendMessage",      make_method(this, &EotuSocketAPI::sendMessage));
 		registerMethod("close",      make_method(this, &EotuSocketAPI::close));
 
 		m_lastsock = 0;
@@ -103,8 +105,12 @@ public:
 
 	// Method connect
 	int connect(const std::string& host, const int port, const FB::JSObjectPtr& callback);
+	// Method login
+	int login(const int sock, const std::string& username, const std::string& password);
 	// Method send
 	bool send(const int sock, const std::string& data);
+	// Method sendMessage
+	bool sendMessage(const int sock, const int type, const std::string& toUser, const std::string& message);
 	// Method close
 	void close() {
 		for (std::size_t i = 0; i < threads.size(); ++i) {
@@ -113,6 +119,9 @@ public:
 		}
 	}
 
+	void writeString(RakNet::BitStream& stream, const std::string& str);
+	bool sendString(const int sock, const std::string& str);
+	bool sendStream(const int sock, RakNet::BitStream& stream);
 	void receiveUDP(const int sock, const FB::JSObjectPtr &callback);
 	void receiveTCP(const int sock, const FB::JSObjectPtr &callback);
 

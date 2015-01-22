@@ -117,21 +117,53 @@ int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JS
 		threads.push_back(thread);
 	}
 
-
 	return m_lastsock;
 }
 
+int EotuSocketAPI::login(const int sock, const std::string& username, const std::string& password) {
+	RakNet::BitStream sendStream;
+	sendStream.Write((RakNet::MessageID)ID_USER_PACKET_ENUM);
+	sendStream.Write(12); // AUTH
+	this->writeString(sendStream, username);
+	this->writeString(sendStream, password);
+
+	return this->sendStream(sock, sendStream);
+}
+
 bool EotuSocketAPI::send(const int sock, const std::string& data) {
+	
+	return this->sendString(sock, data);
+}
+
+bool EotuSocketAPI::sendMessage(const int sock, const int type, const std::string& toUser, const std::string& message) {
+
+	RakNet::BitStream sendStream;
+	sendStream.Write((RakNet::MessageID)ID_USER_PACKET_ENUM);
+	sendStream.Write(type);
+	this->writeString(sendStream, toUser);
+	this->writeString(sendStream, message);
+
+	return this->sendStream(sock, sendStream);
+}
+
+void EotuSocketAPI::writeString(RakNet::BitStream& stream, const std::string& str)
+{
+	RakNet::RakString data;
+	data.Set("%s", str.c_str());
+
+	stream.Write(data);
+}
+
+bool EotuSocketAPI::sendString(const int sock, const std::string& str) {
 	if (clients.find(sock) == clients.end()) {
 		return false;
 	}
+
 	RakNet::RakString request;
-	request.Set("%s", data.c_str());
+	request.Set("%s", str.c_str());
+
 	boost::shared_ptr<Client> client = clients[sock];
 	if (client->connected == false) {
-#ifdef _DEBUG
-		fire_Debug("send fail not connected");
-#endif
 		return false;
 	}
 	if (client->useTCP) {
@@ -139,10 +171,26 @@ bool EotuSocketAPI::send(const int sock, const std::string& data) {
 	} else {
 		client->udpPeer->Send(request.C_String(), (unsigned int)request.GetLength(), HIGH_PRIORITY, RELIABLE_ORDERED, 0, client->systemAddresses, false);	
 	}
-#ifdef _DEBUG
-	fire_Debug(request.C_String());
-	fire_Debug(request.GetLength());
-#endif
+
+	return true;
+}
+
+bool EotuSocketAPI::sendStream(const int sock, RakNet::BitStream& stream)
+{
+	if (clients.find(sock) == clients.end()) {
+		return false;
+	}
+
+	boost::shared_ptr<Client> client = clients[sock];
+	if (client->connected == false) {
+		return false;
+	}
+	if (client->useTCP) {
+		client->tcpPeer->Send((const char*)stream.GetData(), stream.GetNumberOfBytesUsed(), client->systemAddresses, false);
+	} else {
+		client->udpPeer->Send(&stream, HIGH_PRIORITY, RELIABLE_ORDERED, 0, client->systemAddresses, false);	
+	}
+
 	return true;
 }
 
