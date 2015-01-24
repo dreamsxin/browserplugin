@@ -8,6 +8,8 @@
 #include "variant_list.h"
 #include "DOM/Document.h"
 #include "global/config.h"
+#include "json/json.h"
+#include "fbjson.h"
 
 #include "EotuSocketAPI.h"
 
@@ -120,12 +122,13 @@ int EotuSocketAPI::connect(const std::string& host, const int port, const FB::JS
 	return m_lastsock;
 }
 
-int EotuSocketAPI::login(const int sock, const std::string& username, const std::string& password) {
+int EotuSocketAPI::login(const int sock, const FB::variant &data) {
 	RakNet::BitStream sendStream;
 	sendStream.Write((RakNet::MessageID)ID_USER_PACKET_ENUM);
-	sendStream.Write(12); // AUTH
-	this->writeString(sendStream, username);
-	this->writeString(sendStream, password);
+	sendStream.Write(EOTU_AUTH_MESSAGE);
+
+	Json::Value json = FB::variantToJsonValue(data);
+	this->writeString(sendStream, json.toString());
 
 	return this->sendStream(sock, sendStream);
 }
@@ -135,13 +138,14 @@ bool EotuSocketAPI::send(const int sock, const std::string& data) {
 	return this->sendString(sock, data);
 }
 
-bool EotuSocketAPI::sendMessage(const int sock, const int type, const std::string& toUser, const std::string& message) {
+bool EotuSocketAPI::sendMessage(const int sock, const FB::variant &data) {
 
 	RakNet::BitStream sendStream;
 	sendStream.Write((RakNet::MessageID)ID_USER_PACKET_ENUM);
-	sendStream.Write(type);
-	this->writeString(sendStream, toUser);
-	this->writeString(sendStream, message);
+	sendStream.Write(EOTU_FORWARD_MESSAGE);
+	sendStream.Write(EOTU_FORWARD_TEXT_MESSAGE);
+	Json::Value json = FB::variantToJsonValue(data);
+	this->writeString(sendStream, json.toString());
 
 	return this->sendStream(sock, sendStream);
 }
@@ -275,9 +279,24 @@ void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
 			case ID_USER_PACKET_ENUM:
 				{
 					fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
+					int type;
+					stream.Read(type);
+					int result;
+					RakNet::RakString json;
 					try {
-						callback->Invoke("change", FB::variant_list_of());
-						callback->Invoke("receive", FB::variant_list_of(packet->data));
+						if (type == EOTU_AUTH_MESSAGE)  {
+							stream.Read(result);
+							stream.Read(json);
+							if (result == EOTU_AUTH_SUCCESS) {
+								callback->Invoke("authSuccess", FB::variant_list_of(json.C_String()));
+							} else {
+								callback->Invoke("authFail", FB::variant_list_of(json.C_String()));
+							}
+							
+						} else {
+							callback->Invoke("change", FB::variant_list_of());
+							callback->Invoke("receive", FB::variant_list_of(packet->data));
+						}
 					} catch (const FB::script_error& ex) {
 						m_host->htmlLog(std::string("Function call failed with ") + ex.what());
 					}

@@ -82,7 +82,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\RakNet;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -101,10 +101,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;DEBUG;_DEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"Debug\";EotuSocket_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,7 +113,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Debug\ActiveXCore.lib;..\..\PluginCore\Debug\PluginCore.lib;PluginAuto\Debug\EOTU_PluginAuto.lib;..\..\NpapiCore\Debug\NpapiCore.lib;..\..\ScriptingCore\Debug\ScriptingCore.lib;..\..\boost\libs\thread\Debug\boost_thread.lib;..\..\boost\libs\system\Debug\boost_system.lib;Wininet.lib;..\..\Debug\RakNet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Debug\ActiveXCore.lib;..\..\PluginCore\Debug\PluginCore.lib;PluginAuto\Debug\EOTU_PluginAuto.lib;..\..\NpapiCore\Debug\NpapiCore.lib;..\..\ScriptingCore\Debug\ScriptingCore.lib;..\..\PluginCore\Debug\PluginCore.lib;..\..\boost\libs\thread\Debug\boost_thread.lib;..\..\boost\libs\system\Debug\boost_system.lib;..\..\fblibs\jsoncpp\Debug\jsoncpp.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
@@ -131,7 +131,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\RakNet;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;K:\workspace\firebreath-1\src\3rdParty\RakNet;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
@@ -150,10 +150,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"Release\";EotuSocket_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -162,7 +162,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Release\ActiveXCore.lib;..\..\PluginCore\Release\PluginCore.lib;PluginAuto\Release\EOTU_PluginAuto.lib;..\..\NpapiCore\Release\NpapiCore.lib;..\..\ScriptingCore\Release\ScriptingCore.lib;..\..\boost\libs\thread\Release\boost_thread.lib;..\..\boost\libs\system\Release\boost_system.lib;Wininet.lib;..\..\Release\RakNet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\Release\ActiveXCore.lib;..\..\PluginCore\Release\PluginCore.lib;PluginAuto\Release\EOTU_PluginAuto.lib;..\..\NpapiCore\Release\NpapiCore.lib;..\..\ScriptingCore\Release\ScriptingCore.lib;..\..\boost\libs\thread\Release\boost_thread.lib;..\..\boost\libs\system\Release\boost_system.lib;..\..\fblibs\jsoncpp\Release\jsoncpp.lib;Wininet.lib;..\..\$(Configuration)\RakNet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -183,7 +183,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DisableSpecificWarnings>4996;4290</DisableSpecificWarnings>
@@ -203,10 +203,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"MinSizeRel\";EotuSocket_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -215,7 +215,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\MinSizeRel\ActiveXCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;PluginAuto\MinSizeRel\EOTU_PluginAuto.lib;..\..\NpapiCore\MinSizeRel\NpapiCore.lib;..\..\ScriptingCore\MinSizeRel\ScriptingCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;..\..\boost\libs\thread\MinSizeRel\boost_thread.lib;..\..\boost\libs\system\MinSizeRel\boost_system.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\MinSizeRel\ActiveXCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;PluginAuto\MinSizeRel\EOTU_PluginAuto.lib;..\..\NpapiCore\MinSizeRel\NpapiCore.lib;..\..\ScriptingCore\MinSizeRel\ScriptingCore.lib;..\..\PluginCore\MinSizeRel\PluginCore.lib;..\..\boost\libs\thread\MinSizeRel\boost_thread.lib;..\..\boost\libs\system\MinSizeRel\boost_system.lib;..\..\fblibs\jsoncpp\MinSizeRel\jsoncpp.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -236,7 +236,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
       <AdditionalOptions> /Zm256 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -254,10 +254,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDLL;FB_WIN=1;XP_WIN=1;UNICODE;_UNICODE;_WINDOWS;BOOST_ALL_NO_LIB=1;NDEBUG;_ATL_STATIC_REGISTRY;CMAKE_INTDIR=\"RelWithDebInfo\";EotuSocket_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -266,7 +266,7 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\RelWithDebInfo\ActiveXCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;PluginAuto\RelWithDebInfo\EOTU_PluginAuto.lib;..\..\NpapiCore\RelWithDebInfo\NpapiCore.lib;..\..\ScriptingCore\RelWithDebInfo\ScriptingCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;..\..\boost\libs\thread\RelWithDebInfo\boost_thread.lib;..\..\boost\libs\system\RelWithDebInfo\boost_system.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;psapi.lib;..\..\ActiveXCore\RelWithDebInfo\ActiveXCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;PluginAuto\RelWithDebInfo\EOTU_PluginAuto.lib;..\..\NpapiCore\RelWithDebInfo\NpapiCore.lib;..\..\ScriptingCore\RelWithDebInfo\ScriptingCore.lib;..\..\PluginCore\RelWithDebInfo\PluginCore.lib;..\..\boost\libs\thread\RelWithDebInfo\boost_thread.lib;..\..\boost\libs\system\RelWithDebInfo\boost_system.lib;..\..\fblibs\jsoncpp\RelWithDebInfo\jsoncpp.lib;psapi.lib;Wininet.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);J:/Program Files/Microsoft Visual Studio 10.0/VC/atlmfc/lib</AdditionalLibraryDirectories>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -339,6 +339,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocket.h" />
     <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocketAPI.h" />
+    <ClInclude Include="gen\FireBreathWin_i.h" />
     <ClInclude Include="gen\rcgen.sh.in" />
     <ClInclude Include="gen\global\axplugin_defs.h" />
     <ClInclude Include="gen\global\COM_config.h" />
@@ -348,11 +349,18 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\projects\EotuSocket\EotuSocketAPI.cpp" />
     <ClCompile Include="..\..\..\projects\EotuSocket\Factory.cpp" />
     <ResourceCompile Include="gen\firebreathWin.rc" />
+    <ClCompile Include="gen\FireBreathWin_i.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
     <None Include="..\..\..\projects\EotuSocket\PluginConfig.cmake" />
     <None Include="gen\ExportList_plugin.txt" />
     <None Include="gen\FBControl.htm" />
     <None Include="gen\FBControl.rgs" />
     <None Include="gen\FireBreathWin.rgs" />
+    <None Include="gen\FireBreathWin.tlb" />
     <None Include="gen\global" />
     <None Include="gen\README.txt" />
     <None Include="gen\version_script.txt" />
@@ -386,6 +394,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </ProjectReference>
     <ProjectReference Include="K:/workspace/firebreath-1/build/boost/libs/thread/boost_thread.vcxproj">
       <Project>24F40334-78EC-4523-A647-84DC6481987B</Project>
+    </ProjectReference>
+    <ProjectReference Include="K:/workspace/firebreath-1/build/fblibs/jsoncpp/jsoncpp.vcxproj">
+      <Project>77C194D2-B6DD-43D5-8AD4-E3FAAD1EBA8E</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

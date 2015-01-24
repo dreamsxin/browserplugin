@@ -106,11 +106,11 @@ public:
 	// Method connect
 	int connect(const std::string& host, const int port, const FB::JSObjectPtr& callback);
 	// Method login
-	int login(const int sock, const std::string& username, const std::string& password);
+	int login(const int sock, const FB::variant &data);
 	// Method send
 	bool send(const int sock, const std::string& data);
 	// Method sendMessage
-	bool sendMessage(const int sock, const int type, const std::string& toUser, const std::string& message);
+	bool sendMessage(const int sock, const FB::variant &data);
 	// Method close
 	void close() {
 		for (std::size_t i = 0; i < threads.size(); ++i) {
@@ -129,6 +129,39 @@ public:
 	FB_JSAPI_EVENT(Connected, 0, ());
 	FB_JSAPI_EVENT(StatusChange, 2, (const int, const FB::variant&));
 	FB_JSAPI_EVENT(Debug, 1, (const FB::variant&));
+
+public:
+	// 服务端消息
+	enum EotuMessageType
+	{
+		EOTU_NOTIFY_MESSAGE = 0x1000,
+		EOTU_FORWARD_MESSAGE = 0x2000,
+		EOTU_INVITE_MESSAGE = 0x3000,
+		EOTU_AUTH_MESSAGE = 0x4000,
+		EOTU_ERROR_MESSAGE = 0x9000,
+	};
+
+	// NOTIFY MESSAGE
+	enum EotuNotifyMesssageSystem
+	{
+		EOTU_NOTIFY_VERSION_UPGRADE,
+		EOTU_NOTIFY_ACCOUNT_REGISTER,
+		EOTU_NOTIFY_ACCOUNT_UPDATE,
+		EOTU_NOTIFY_CONTACT_ONLINE,
+	};
+
+	// AUTH MESSAGE
+	enum EotuAuthMesssageSystem
+	{
+		EOTU_AUTH_SUCCESS,
+		EOTU_AUTH_FAIL,
+	};
+
+	// FORWARD MESSAGE
+	enum EotuForwardMesssageSystem
+	{
+		EOTU_FORWARD_TEXT_MESSAGE,
+	};
 
 private:
     EotuSocketWeakPtr m_plugin;

@@ -183,7 +183,7 @@ EOTU_PluginAuto_SOURCE_DIR:STATIC=K:/workspace/firebreath-1/src/PluginAuto
 EotuSocket_BINARY_DIR:STATIC=K:/workspace/firebreath-1/build/projects/EotuSocket
 
 //Dependencies for the target
-EotuSocket_LIB_DEPENDS:STATIC=general;psapi;general;ActiveXCore;general;PluginCore;general;EOTU_PluginAuto;general;NpapiCore;general;ScriptingCore;general;PluginCore;general;boost_thread;general;boost_system;general;psapi;general;Wininet;
+EotuSocket_LIB_DEPENDS:STATIC=general;psapi;general;ActiveXCore;general;PluginCore;general;EOTU_PluginAuto;general;NpapiCore;general;ScriptingCore;general;PluginCore;general;boost_thread;general;boost_system;general;jsoncpp;general;psapi;general;Wininet;
 
 //Value Computed by CMake
 EotuSocket_SOURCE_DIR:STATIC=K:/workspace/firebreath-1/projects/EotuSocket
@@ -306,6 +306,15 @@ boost_system_LIB_DEPENDS:STATIC=
 //Dependencies for target
 boost_thread_LIB_DEPENDS:STATIC=
 
+//Value Computed by CMake
+jsoncpp_BINARY_DIR:STATIC=K:/workspace/firebreath-1/build/fblibs/jsoncpp
+
+//Dependencies for target
+jsoncpp_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+jsoncpp_SOURCE_DIR:STATIC=K:/workspace/firebreath-1/src/libs/jsoncpp
+
 
 ########################
 # INTERNAL cache entries
@@ -403,7 +412,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=16
 //ADVANCED property for variable: CMAKE_RC_COMPILER
 CMAKE_RC_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_RC_COMPILER_WORKS:INTERNAL=1
@@ -464,6 +473,8 @@ SG_Filter_Common_GUID_CMAKE:INTERNAL=73BCEF1B-1F7F-4283-9D57-8A5BA5C6816D
 //Stored GUID
 SG_Filter_DOM_GUID_CMAKE:INTERNAL=1288AD50-1583-4BCE-B205-88004165142F
 //Stored GUID
+SG_Filter_FB Helpers_GUID_CMAKE:INTERNAL=FB176B89-02F2-4A2D-96F5-708EF408B346
+//Stored GUID
 SG_Filter_Generated_GUID_CMAKE:INTERNAL=FDC0BEA7-4E72-4E46-BDA3-7A0A8BE6FCF4
 //Stored GUID
 SG_Filter_Header Files_GUID_CMAKE:INTERNAL=6FE4EA2A-AFF8-4497-862F-19F08E9D5F79
@@ -519,4 +530,6 @@ boost_regex_GUID_CMAKE:INTERNAL=76AA9316-682D-4CD4-BB69-E9D2B3328C73
 boost_system_GUID_CMAKE:INTERNAL=16A7D412-9670-4D8A-A715-BA603F07D4B4
 //Stored GUID
 boost_thread_GUID_CMAKE:INTERNAL=24F40334-78EC-4523-A647-84DC6481987B
+//Stored GUID
+jsoncpp_GUID_CMAKE:INTERNAL=77C194D2-B6DD-43D5-8AD4-E3FAAD1EBA8E
 

@@ -61,7 +61,7 @@
     </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -71,7 +71,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -81,7 +81,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -91,7 +91,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
-      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>K:\workspace\firebreath-1;K:\workspace\firebreath-1\src\3rdParty\gecko-sdk\includes;K:\workspace\firebreath-1\src\NpapiCore;K:\workspace\firebreath-1\src\ActiveXCore;K:\workspace\firebreath-1\src\ScriptingCore;K:\workspace\firebreath-1\src\PluginAuto\Win;K:\workspace\firebreath-1\src\PluginAuto;K:\workspace\firebreath-1\src\PluginCore;K:\workspace\firebreath-1\build\projects\EotuSocket\gen;K:\workspace\firebreath-1\src\3rdParty\boost;K:\workspace\firebreath-1\src\libs\jsoncpp\include;J:\Program Files\Microsoft Visual Studio 10.0\VC\atlmfc\include;K:\workspace\firebreath-1\src\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

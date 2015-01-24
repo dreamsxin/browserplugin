@@ -7,8 +7,9 @@ K:/workspace/firebreath-1/build/ScriptingCoreTest/CMakeFiles/UnitTest_ScriptingC
 K:/workspace/firebreath-1/build/ScriptingCore/CMakeFiles/ScriptingCore.dir
 K:/workspace/firebreath-1/build/ActiveXCoreTest/CMakeFiles/UnitTest_ActiveXCore.dir
 K:/workspace/firebreath-1/build/boost/libs/date_time/CMakeFiles/boost_date_time.dir
-K:/workspace/firebreath-1/build/ScriptingCoreTest/CMakeFiles/ALL_BUILD.dir
+K:/workspace/firebreath-1/build/fblibs/jsoncpp/CMakeFiles/ALL_BUILD.dir
 K:/workspace/firebreath-1/build/PluginCore/CMakeFiles/PluginCore.dir
+K:/workspace/firebreath-1/build/fblibs/jsoncpp/CMakeFiles/jsoncpp.dir
 K:/workspace/firebreath-1/build/NpapiCore/CMakeFiles/NpapiCore.dir
 K:/workspace/firebreath-1/build/boost/libs/regex/CMakeFiles/boost_regex.dir
 K:/workspace/firebreath-1/build/CMakeFiles/ZERO_CHECK.dir

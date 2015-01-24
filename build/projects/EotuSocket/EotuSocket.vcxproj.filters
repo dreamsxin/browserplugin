@@ -10,6 +10,9 @@
     <ClCompile Include="..\..\..\projects\EotuSocket\Factory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gen\FireBreathWin_i.c">
+      <Filter>Generated</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocket.h">
@@ -17,6 +20,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\projects\EotuSocket\EotuSocketAPI.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gen\FireBreathWin_i.h">
+      <Filter>Generated</Filter>
     </ClInclude>
     <ClInclude Include="gen\rcgen.sh.in">
       <Filter>Generated</Filter>
@@ -49,6 +55,9 @@
       <Filter>Generated</Filter>
     </None>
     <None Include="gen\FireBreathWin.rgs">
+      <Filter>Generated</Filter>
+    </None>
+    <None Include="gen\FireBreathWin.tlb">
       <Filter>Generated</Filter>
     </None>
     <None Include="gen\global">
