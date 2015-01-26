@@ -281,16 +281,25 @@ void EotuSocketAPI::receiveUDP(const int sock, const FB::JSObjectPtr &callback)
 					fire_StatusChange(ID_USER_PACKET_ENUM, "ID_USER_PACKET_ENUM");
 					int type;
 					stream.Read(type);
-					int result;
+					int message_type;
 					RakNet::RakString json;
 					try {
 						if (type == EOTU_AUTH_MESSAGE)  {
-							stream.Read(result);
+							stream.Read(message_type);
 							stream.Read(json);
-							if (result == EOTU_AUTH_SUCCESS) {
+							if (message_type == EOTU_AUTH_SUCCESS) {
 								callback->Invoke("authSuccess", FB::variant_list_of(json.C_String()));
 							} else {
 								callback->Invoke("authFail", FB::variant_list_of(json.C_String()));
+							}
+							
+						} else if (type == EOTU_FORWARD_MESSAGE)  {
+							stream.Read(message_type);
+							stream.Read(json);
+							if (message_type == EOTU_FORWARD_TEXT_MESSAGE) {
+								callback->Invoke("textMessage", FB::variant_list_of(json.C_String()));
+							} else {
+								callback->Invoke("message", FB::variant_list_of(message_type)(json.C_String()));
 							}
 							
 						} else {
